@@ -10,7 +10,7 @@ from openai import AsyncOpenAI
 from openai.resources.beta.assistants import Assistant
 from openai.resources.beta.threads.messages import Message
 from openai.resources.beta.threads.runs.runs import Run
-from openai.types.beta import AssistantResponseFormat
+# from openai.types.beta import AssistantResponseFormat
 from openai.types.beta.assistant_tool import CodeInterpreterTool, FileSearchTool
 from openai.types.beta.threads.image_file_content_block import ImageFileContentBlock
 from openai.types.beta.threads.runs import RunStep
@@ -317,7 +317,7 @@ class OpenAIAssistantBase(Agent):
 
         enable_json_response = (
             hasattr(assistant, "response_format")
-            and isinstance(assistant.response_format, AssistantResponseFormat)
+            # and isinstance(assistant.response_format, AssistantResponseFormat)
             and assistant.response_format.type == "json_object"
         )
 
